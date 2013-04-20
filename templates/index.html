@@ -14,10 +14,10 @@
 	<h2>Base64 Decoder-Encoder</h2>
 	<form method="POST" action="">
 	  <textarea id="base64text" name="base64text" rows="10" style="width: 927px;" autofocus>{{ source_text }}</textarea><br />
-	  <input type="submit" class="btn-primary btn-large" value="Декодировать!" style="width: 308px" name="decoder"/>&nbsp
-	  <input type="submit" class="btn-primary btn-large" value="Закодировать!" style="width: 308px" name="coder"/>&nbsp
-	  <input type="button" class="btn-primary btn-large" value="Очистить поля!" style="width: 308px" name="clear" onclick="document.getElementById('base64text').value=''; document.getElementById('rezult').value=''; "/>&nbsp
-<br />
+	  <input type="submit" class="btn-primary btn-large" value="Декодировать!" style="width: 200px" name="decoder"/>
+	  <input type="submit" class="btn-primary btn-large" value="Закодировать!" style="width: 200px" name="coder"/>	    
+	  <input type="button" class="btn-primary btn-large" value="Очистить поля!" style="width: 200px" name="clear" onclick="document.getElementById('base64text').value=''; document.getElementById('rezult').value=''; "/>&nbsp  
+	  <div class="span12"><br /></div> 
 	  <textarea id="rezult" rows="10" style="width: 927px;">{{ rezult }}</textarea>
 	</form>
       </div>
