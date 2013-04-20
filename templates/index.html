@@ -11,14 +11,15 @@
   <body>
     <div class="container">
       <div class="span12">
-	<h2>Base64 Decoder</h2>
+	<h2>Base64 Decoder-Encoder</h2>
 	<form method="POST" action="">
-	  <textarea name="base64text" rows="20" style="width: 927px;"></textarea><br />
-	  <button type="submit" class="btn-primary btn-large" value="Декодировать!" style="width: 942px" />
+	  <textarea name="base64text" rows="10" style="width: 927px;" autofocus>{{ source_text }}</textarea><br />
+	  <input type="submit" class="btn-primary btn-large" value="Декодировать!" style="width: 308px" name="decoder"/>&nbsp
+	  <input type="submit" class="btn-primary btn-large" value="Закодировать!" style="width: 308px" name="coder"/>&nbsp
+	  <input type="submit" class="btn-primary btn-large" value="Очистить поля!" style="width: 308px" name="clear"/>&nbsp
+<br />
+	  <textarea name="rezult" rows="10" style="width: 927px;">{{ rezult }}</textarea>
 	</form>
-	<div class="alert alert-info">
-	  {{ rezult }}
-	</div>
       </div>
     </div>
   </body>
