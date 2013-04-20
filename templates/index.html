@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Base64-Decoder v0.0.1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="/static/bootstrap.css" rel="stylesheet">
+    <link href="/static/jquery-ui.css" rel="stylesheet">
+    <meta name="keywords" content="base64, decoder, base64 to plain-text, base64 to plaintext" />
+    <script type="text/javascript" src="/static/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="span12">
+	<h2>Base64 Decoder</h2>
+	<form method="POST" action="">
+	  <textarea name="base64text" rows="20" style="width: 927px;"></textarea><br />
+	  <button type="submit" class="btn-primary btn-large" value="Декодировать!" style="width: 942px" />
+	</form>
+	<div class="alert alert-info">
+	  {{ rezult }}
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
