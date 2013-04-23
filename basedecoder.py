@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Приложение предназначено для декодирования из base64 в plain-text
-и обратно.
+Decoding from base64 to plain-text and another way.
 """
-
-
 import base64
 from flask import Flask, request, render_template
 
@@ -15,24 +12,18 @@ app.config.from_object(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    """ main page whith main forms"""
-
     if request.method == 'POST':
-        string = request.form['base64text']
-        if "decoder" in request.form.keys():
+        string = request.form['text']
+        if "decode" in request.form.keys():
             try:
-                rezult = base64.b64decode(string).decode("utf-8")
+                result = base64.b64decode(string).decode("utf-8")
             except:
-                rezult = u"Это не Base64!"
-            return render_template('index.html', 
-                                   rezult=rezult,
-                                   source_text=string)
-        elif "coder" in request.form.keys():
-            rezult = base64.b64encode(string.encode("utf-8"))
-            return render_template('index.html', 
-                                   rezult=rezult,
-                                   source_text=string)
-        return render_template('index.html', source_text=u"Неверный запрос!")
+                result = u"It isn't a Base64!"
+            return render_template('index.html', source_text=string, result=result)
+        elif "encode" in request.form.keys():
+            return render_template('index.html', source_text=string,
+                                   result=base64.b64encode(string.encode("utf-8")))
+        return render_template('index.html', source_text=u"Wrong request!")
     return render_template('index.html', source_text=u"")
 
 

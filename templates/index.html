@@ -1,11 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
-    <title>Base64-Decoder v0.0.1</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="/static/bootstrap.css" rel="stylesheet">
-    <link href="/static/jquery-ui.css" rel="stylesheet">
-    <meta name="keywords" content="base64, decoder, base64 to plain-text, base64 to plaintext" />
+    <title>Base64-Decoder v0.0.2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/static/bootstrap.css" rel="stylesheet" />
+    <link href="/static/jquery-ui.css" rel="stylesheet" />
     <script type="text/javascript" src="/static/jquery.js"></script>
   </head>
   <body>
@@ -13,12 +11,12 @@
       <div class="span12">
 	<h2>Base64 Decoder-Encoder</h2>
 	<form method="POST" action="">
-	  <textarea id="base64text" name="base64text" rows="10" style="width: 927px;" autofocus>{{ source_text }}</textarea><br />
-	  <input type="submit" class="btn-primary btn-large" value="Декодировать!" style="width: 200px" name="decoder"/>
-	  <input type="submit" class="btn-primary btn-large" value="Закодировать!" style="width: 200px" name="coder"/>	    
-	  <input type="button" class="btn-primary btn-large" value="Очистить поля!" style="width: 200px" name="clear" onclick="document.getElementById('base64text').value=''; document.getElementById('rezult').value=''; "/>&nbsp  
+	  <textarea id="text" name="text" rows="10" style="width: 927px;" autofocus>{{ source_text }}</textarea><br />
+	  <input type="submit" class="btn-primary btn-large" value="Decode!" style="width: 200px" name="decode"/>
+	  <input type="submit" class="btn-primary btn-large" value="Encode!" style="width: 200px" name="encode"/>
+	  <input type="button" class="btn-primary btn-large" value="Clean them all!" style="width: 200px" name="clear" onclick="document.getElementById('text').value=''; document.getElementById('result').value=''; "/>
 	  <div class="span12"><br /></div> 
-	  <textarea id="rezult" rows="10" style="width: 927px;">{{ rezult }}</textarea>
+	  <textarea id="result" rows="10" style="width: 927px;" readonly>{{ result }}</textarea>
 	</form>
       </div>
     </div>
