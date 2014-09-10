@@ -1,0 +1,7 @@
+env/
+build/
+*~
+.#*
+*.swp
+*.bak
+*.py[co]
